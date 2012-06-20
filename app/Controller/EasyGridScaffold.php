@@ -1,0 +1,101 @@
+<?php
+
+App::uses('Scaffold', 'Controller');
+
+class EasyGridScaffold extends Scaffold {
+	
+ /**
+ * When methods are now present in a controller
+ * scaffoldView is used to call default Scaffold methods if:
+ * `public $scaffold;` is placed in the controller's class definition.
+ *
+ * @param CakeRequest $request Request object for scaffolding
+ * @return mixed A rendered view of scaffold action, or showing the error
+ * @throws MissingActionException When methods are not scaffolded.
+ * @throws MissingDatabaseException When the database connection is undefined.
+ */
+	protected function _scaffold(CakeRequest $request) {
+		$db = ConnectionManager::getDataSource($this->ScaffoldModel->useDbConfig);
+		$prefixes = Configure::read('Routing.prefixes');
+		$scaffoldPrefix = $this->scaffoldActions;
+
+		if (isset($db)) {
+			if (empty($this->scaffoldActions)) {
+				$this->scaffoldActions = array(
+					'index', 'list', 'view', 'add', 'create', 'edit', 'update', 'delete'
+				);
+			} elseif (!empty($prefixes) && in_array($scaffoldPrefix, $prefixes)) {
+				$this->scaffoldActions = array(
+					$scaffoldPrefix . '_index',
+					$scaffoldPrefix . '_list',
+					$scaffoldPrefix . '_view',
+					$scaffoldPrefix . '_add',
+					$scaffoldPrefix . '_create',
+					$scaffoldPrefix . '_edit',
+					$scaffoldPrefix . '_update',
+					$scaffoldPrefix . '_delete'
+				);
+			}
+
+			if (in_array($request->params['action'], $this->scaffoldActions)) {
+				if (!empty($prefixes)) {
+					$request->params['action'] = str_replace($scaffoldPrefix . '_', '', $request->params['action']);
+				}
+				switch ($request->params['action']) {
+					case 'index':
+					case 'list':
+						$this->_scaffoldIndex($request);
+					break;
+					case 'view':
+						$this->_scaffoldView($request);
+					break;
+					case: 'read':
+						$this->_scaffoldRead($request);
+					break;
+					case 'add':
+					case 'create':
+						$this->_scaffoldSave($request, 'add');
+					break;
+					case 'edit':
+						$this->_scaffoldSave($request, 'edit');
+					case 'update':
+						$this->_scaffoldUpdate($request, 'update');
+					break;
+					case 'delete':
+						$this->_scaffoldDelete($request);
+					break;
+				}
+			} else {
+				throw new MissingActionException(array(
+					'controller' => $this->controller->name,
+					'action' => $request->action
+				));
+			}
+		} else {
+			throw new MissingDatabaseException(array('connection' => $this->ScaffoldModel->useDbConfig));
+		}
+	}
+
+	protected function _scaffoldUpdate(CakeRequest $request, $action = 'update') {
+		$formAction = 'update';
+		$this->layout = 'ajax';		
+		$HTTP_RAW_POST_DATA = file_get_contents('php://input');		
+		//convert top level stdclass to array
+		$jsonData = get_object_vars(json_decode($HTTP_RAW_POST_DATA));		
+		$toSave = array();		
+		$toSave = (get_object_vars($jsonData[$this->ScaffoldModel->className]));
+		
+		unset($jsonData);		
+				
+		$data = array($this->ScaffoldModel->className => $toSave);		
+		
+		$success = $this->ScaffoldModel->save($data, array('validate' => true));
+		
+		if($success !== false){			
+			unset($success);
+			$success = true;
+		}
+	}
+}
+
+?>

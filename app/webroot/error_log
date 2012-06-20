@@ -1,0 +1,14 @@
+[20-Jun-2012 08:50:58] PHP Parse error:  syntax error, unexpected T_PROTECTED in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/AppController.php on line 37
+[20-Jun-2012 08:52:30] PHP Fatal error:  Class 'EasyGirdScaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 12
+[20-Jun-2012 08:53:27] PHP Fatal error:  Class 'EasyGirdScaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 13
+[20-Jun-2012 08:53:59] PHP Fatal error:  Class 'EasyGirdScaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 13
+[20-Jun-2012 08:55:50] PHP Fatal error:  Class 'EasyGirdScaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 13
+[20-Jun-2012 08:55:54] PHP Fatal error:  Class 'EasyGirdScaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 13
+[20-Jun-2012 08:56:17] PHP Fatal error:  Class 'Scaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 5
+[20-Jun-2012 09:06:01] PHP Fatal error:  Class 'Scaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 5
+[20-Jun-2012 09:11:49] PHP Fatal error:  Class 'EasyGirdScaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 13
+[20-Jun-2012 09:14:06] PHP Fatal error:  Class 'EasyGirdScaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 17
+[20-Jun-2012 09:15:50] PHP Fatal error:  Class 'EasyGirdScaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 13
+[20-Jun-2012 09:18:22] PHP Parse error:  syntax error, unexpected ':' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 3
+[20-Jun-2012 09:20:43] PHP Parse error:  syntax error, unexpected ':' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 3
+[20-Jun-2012 09:21:07] PHP Fatal error:  Class 'EasyGridScaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 13
