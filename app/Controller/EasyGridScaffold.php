@@ -22,13 +22,14 @@ class EasyGridScaffold extends Scaffold {
 		if (isset($db)) {
 			if (empty($this->scaffoldActions)) {
 				$this->scaffoldActions = array(
-					'index', 'list', 'view', 'add', 'create', 'edit', 'update', 'delete'
+					'read', 'index', 'list', 'view', 'add', 'create', 'edit', 'update', 'delete'
 				);
 			} elseif (!empty($prefixes) && in_array($scaffoldPrefix, $prefixes)) {
 				$this->scaffoldActions = array(
 					$scaffoldPrefix . '_index',
 					$scaffoldPrefix . '_list',
 					$scaffoldPrefix . '_view',
+					$scaffoldPrefix . '_read',
 					$scaffoldPrefix . '_add',
 					$scaffoldPrefix . '_create',
 					$scaffoldPrefix . '_edit',
@@ -49,7 +50,7 @@ class EasyGridScaffold extends Scaffold {
 					case 'view':
 						$this->_scaffoldView($request);
 					break;
-					case: 'read':
+					case 'read':
 						$this->_scaffoldRead($request);
 					break;
 					case 'add':
@@ -95,6 +96,63 @@ class EasyGridScaffold extends Scaffold {
 			unset($success);
 			$success = true;
 		}
+		$this->controller->set(array('data' => $success, '_serialize' => 'data'));
+ 
+	}
+	
+		function _getPage($page, $limit, $conditions, $orderBy){
+
+			$params = array(
+					'conditions' => $conditions,
+					'recursive' => -1, //int
+					'order' => $orderBy, //string or array defining order
+					'limit' => $limit, //int
+					'page'=>$page, //int   
+					'callbacks' => false 
+				);	
+
+			$countParams = array(
+					'conditions' => $conditions,
+					'recursive' => -1, //int
+					'order' => $orderBy, //string or array defining order
+					'callbacks' => false 
+				);
+				
+				$page =  $this->ScaffoldModel->find('all', $params);
+				$count = $this->ScaffoldModel->find('count', $countParams);
+				
+				
+				$toReturn = array();
+				for($i =0; $i< count($page); $i++){
+					array_push($toReturn, $page[$i][$this->ScaffoldModel->name ]);
+				}			
+				
+				return(array( $this->ScaffoldModel->name  => $toReturn, 'total' => $count));
+		}
+	
+	protected function _scaffoldRead(CakeRequest $request){
+		$this->layout = 'ajax';
+		$this->controller->viewClass = 'Json';
+		debug($request);
+		$urlParams = ($request->query);		
+		$page = $urlParams['page'];	
+		$limit =  $urlParams['limit'];		
+		$filters =  json_decode($urlParams['filter']);
+		$sorters =  json_decode($urlParams['sort']);
+	
+		$conditions = array();
+		for($i = 0; $i < count($filters); $i++){
+			$conditions[$this->ScaffoldModel->className . '.' . $filters[$i]->property] = $filters[$i]->value;	
+		}
+		
+		$order = array();
+			for($i = 0; $i < count($sorters); $i++){
+			$order[$this->ScaffoldModel->className . '.' . $sorters[$i]->property] = $sorters[$i]->direction;	
+		}
+		
+		$toJson = $this->_getPage($page,$limit,$conditions,$order);
+		$this->controller->set(array('data' => $toJson, '_serialize' => 'data'));
+ 
 	}
 }
 

@@ -12,3 +12,9 @@
 [20-Jun-2012 09:18:22] PHP Parse error:  syntax error, unexpected ':' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 3
 [20-Jun-2012 09:20:43] PHP Parse error:  syntax error, unexpected ':' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 3
 [20-Jun-2012 09:21:07] PHP Fatal error:  Class 'EasyGridScaffold' not found in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 13
+[20-Jun-2012 09:55:53] PHP Parse error:  syntax error, unexpected ':' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 53
+[20-Jun-2012 09:58:01] PHP Fatal error:  Call to undefined method EasyGridScaffold::set() in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 149
+[20-Jun-2012 09:59:33] PHP Fatal error:  Call to undefined method EasyGridScaffold::set() in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 149
+[20-Jun-2012 10:12:54] PHP Parse error:  syntax error, unexpected '[', expecting T_STRING or T_VARIABLE or '{' or '$' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 133
+[20-Jun-2012 13:01:41] PHP Parse error:  syntax error, unexpected $end in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 158
+[20-Jun-2012 13:01:55] PHP Fatal error:  Call to undefined method EasyGridScaffold::controller() in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 152
