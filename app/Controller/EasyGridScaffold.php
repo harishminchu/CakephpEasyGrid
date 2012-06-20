@@ -133,25 +133,32 @@ class EasyGridScaffold extends Scaffold {
 	protected function _scaffoldRead(CakeRequest $request){
 		$this->layout = 'ajax';
 		$this->controller->viewClass = 'Json';
-		debug($request);
 		$urlParams = ($request->query);		
 		$page = $urlParams['page'];	
-		$limit =  $urlParams['limit'];		
-		$filters =  json_decode($urlParams['filter']);
-		$sorters =  json_decode($urlParams['sort']);
-	
+		$limit =  $urlParams['limit'];
 		$conditions = array();
-		for($i = 0; $i < count($filters); $i++){
-			$conditions[$this->ScaffoldModel->className . '.' . $filters[$i]->property] = $filters[$i]->value;	
-		}
-		
 		$order = array();
-			for($i = 0; $i < count($sorters); $i++){
-			$order[$this->ScaffoldModel->className . '.' . $sorters[$i]->property] = $sorters[$i]->direction;	
-		}
 		
+		if(isset($urlParams['filter'])){
+			$filters =  json_decode($urlParams['filter']);
+			
+			for($i = 0; $i < count($filters); $i++){
+				$conditions[$this->ScaffoldModel->className . '.' . $filters[$i]->property] = $filters[$i]->value;	
+			}
+			
+		}
+		if(isset($urlParams['sort'])){
+			$sorters =  json_decode($urlParams['sort']);
+			
+				for($i = 0; $i < count($sorters); $i++){
+				$order[$this->ScaffoldModel->className . '.' . $sorters[$i]->property] = $sorters[$i]->direction;	
+			}
+		}		
+
 		$toJson = $this->_getPage($page,$limit,$conditions,$order);
 		$this->controller->set(array('data' => $toJson, '_serialize' => 'data')); 
+		unset($order);
+		unset($conditions);
 	}
 }
 
