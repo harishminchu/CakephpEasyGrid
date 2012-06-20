@@ -217,3 +217,16 @@
 #8 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PayBatchesController), Object(CakeRequest), Object(CakeResponse))
 #9 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2012-06-20 14:03:54 Error: [MissingDatasourceConfigException] The datasource configuration "default" was not found in database.php
+#0 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Model/ConnectionManager.php(94): ConnectionManager::_getConnectionObject('default')
+#1 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Model/Model.php(3417): ConnectionManager::getDataSource('default')
+#2 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Model/Model.php(1083): Model->setDataSource('default')
+#3 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Model/Model.php(3443): Model->setSource('pay_batches')
+#4 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Model/Model.php(1292): Model->getDataSource()
+#5 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Controller/Scaffold.php(136): Model->schema()
+#6 /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php(13): Scaffold->__construct(Object(PayBatchesController), Object(CakeRequest))
+#7 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Controller/Controller.php(489): PayBatchesController->_getScaffold(Object(CakeRequest))
+#8 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#9 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PayBatchesController), Object(CakeRequest), Object(CakeResponse))
+#10 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#11 {main}
