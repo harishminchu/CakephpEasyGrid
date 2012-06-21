@@ -1,8 +1,8 @@
-
 <?php
-class EasyGridComponent extends Component {
+App::uses('AppHelper', 'View/Helper');
 
-		function putExtjsModelForiengKeyFields(&$fieldArray, &$belongsTo, $hasManyKey){			
+class EasyGridHelp extends AppHelper {
+ 	private function putExtjsModelForiengKeyFields(&$fieldArray, &$belongsTo, $hasManyKey){			
 			foreach($belongsTo as $key => $value){
 					$model = ClassRegistry::init($key);				
 					$forienKeyField = array(
@@ -18,7 +18,7 @@ class EasyGridComponent extends Component {
 		}
 		
 		
-		function putExtjsModelNonForiengKeyFields(&$fieldArray, &$fields, &$model){			
+	private	function putExtjsModelNonForiengKeyFields(&$fieldArray, &$fields, &$model){			
 			foreach($fields as $key => $value){
 				if($model ->isForeignKey($key) == false)
 					array_push($fieldArray, array('name' => $key, 'type'=>$value, 'isForeignKey' => false));
@@ -59,9 +59,8 @@ class EasyGridComponent extends Component {
 				unset($fieldArray);
 				
 			}
-			ClassRegistry::flush();
-			$callingController = $this->_Collection->getController();
-		 	$callingController->set('modelsForExjts', json_encode($extjsModels));
+			ClassRegistry::flush();			
+			echo json_encode($extjsModels));
 			
 		}
 }

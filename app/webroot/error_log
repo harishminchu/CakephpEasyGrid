@@ -24,3 +24,5 @@
 [20-Jun-2012 19:06:54] PHP Fatal error:  Call to a member function getColumnTypes() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/Component/EasyGridComponent.php on line 47
 [20-Jun-2012 19:07:10] PHP Fatal error:  Call to a member function getColumnTypes() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/Component/EasyGridComponent.php on line 47
 [20-Jun-2012 19:11:57] PHP Parse error:  syntax error, unexpected '}' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/Component/EasyGridComponent.php on line 79
+[21-Jun-2012 08:15:08] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 81
+[21-Jun-2012 08:15:34] PHP Parse error:  syntax error, unexpected ')' in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 82

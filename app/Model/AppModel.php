@@ -31,4 +31,54 @@ App::uses('Model', 'Model');
  * @package       app.Model
  */
 class AppModel extends Model {
+	
+	private function extjsModelForeignKeyFields(){			
+			
+			$foreignKeyFields = array();
+			
+			foreach($this->$belongsTo as $key => $value){
+					$model = ClassRegistry::init($key);				
+					$forienKeyField = array(
+						'name' =>  $model->hasMany[$this->name]['foreignKey'],		
+						'isForeignKey' => true, 
+						'valueField' =>  'id',
+						'displayField' =>   $model ->displayField,
+						'model'=> $key);
+					
+					array_push($foreignKeyFields, $forienKeyField);
+			}
+			ClassRegistry::flush();
+			return $foreignKeyFields();
+		}
+	
+	function getPath(){
+			$plural = Inflector ::pluralize($this->name);		
+			return  Inflector::underscore($plural);		
+	}
+	
+	function getExtjsFields(){
+		
+		$extjsFields = array();
+		
+		$fields = 	$this->getColumnTypes();
+		
+		foreach($fields as $key => $value){
+				if($model ->isForeignKey($key) == false)
+					array_push($extjsFields, array('name' => $key, 'type'=>$value, 'isForeignKey' => false));			
+			}
+		
+		array_merge($extjsFields, $this->extjsModelForeignKeyFields());
+		
+		return 	$extjsFields;
+		
+	}
+	
+	function getExtjsModel(){			
+		return array(
+					'primaryKey'  => $this->primaryKey, 
+					'displayField' => $this->displayField, 
+					'name'           => $this->name, 
+					'fields'            => $this->getExtjsFields(),
+					'path'             => $this->getPath());
+	}
 }

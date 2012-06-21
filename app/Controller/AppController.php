@@ -21,6 +21,7 @@
  */
 
 App::uses('Controller', 'Controller');
+App::uses('EasyGridScaffold', 'Controller');
 
 /**
  * Application Controller
@@ -32,6 +33,9 @@ App::uses('Controller', 'Controller');
  * @link http://book.cakephp.org/2.0/en/controllers.html#the-app-controller
  */
 class AppController extends Controller {
-
+	public $scaffold;
+	protected function _getScaffold(CakeRequest $request) {
+		return new EasyGridScaffold($this, $request);
+	}
 
 }

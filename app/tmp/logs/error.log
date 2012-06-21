@@ -434,3 +434,31 @@
 #8 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PayBatchesController), Object(CakeRequest), Object(CakeResponse))
 #9 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #10 {main}
+2012-06-20 19:16:38 Error: [MissingActionException] Action ApartmentsController::read() could not be found.
+#0 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(ApartmentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-06-20 19:20:12 Error: [MissingActionException] Action ApartmentsController::read() could not be found.
+#0 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(ApartmentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-06-20 19:20:48 Error: [MissingControllerException] Controller class ApatmentsController could not be found.
+#0 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#1 {main}
+2012-06-20 19:20:56 Error: [MissingActionException] Action ApartmentsController::read() could not be found.
+#0 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(ApartmentsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-06-20 19:21:05 Error: [MissingActionException] Action BuildingsController::read() could not be found.
+#0 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(BuildingsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-06-20 19:21:53 Error: [MissingActionException] Action BuildingsController::read() could not be found.
+#0 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(BuildingsController), Object(CakeRequest), Object(CakeResponse))
+#2 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
