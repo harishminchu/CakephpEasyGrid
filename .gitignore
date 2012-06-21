@@ -1,7 +1,6 @@
-# Test URI
+
 # Ignore netbeans folder
 nbproject/*
-
 
 # Ignore private folder
 /app/private/*
@@ -28,6 +27,9 @@ Thumbs.db
 # Cake TMP Dirs
 /app/tmp/*
 !/app/tmp/
+
+/app/Config/*
+!/app/Config
 
 /app/tmp/cache/*
 !/app/tmp/cache/
