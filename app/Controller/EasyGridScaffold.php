@@ -156,9 +156,11 @@ class EasyGridScaffold extends Scaffold {
 		}		
 
 		$toJson = $this->_getPage($page,$limit,$conditions,$order);
-		$this->controller->set(array('data' => $toJson, '_serialize' => 'data')); 
+		
 		unset($order);
 		unset($conditions);
+		$this->controller->set(array('data' => $toJson, '_serialize' => 'data')); 
+		
 	}
 }
 

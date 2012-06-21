@@ -230,3 +230,32 @@
 #9 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PayBatchesController), Object(CakeRequest), Object(CakeResponse))
 #10 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #11 {main}
+2012-06-20 14:04:58 Error: [MissingConnectionException] Database connection "SQLSTATE[28000] [1045] Access denied for user 'user'@'localhost' (using password: YES)" is missing, or could not be created.
+#0 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Model/Datasource/DboSource.php(245): Mysql->connect()
+#1 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Model/ConnectionManager.php(101): DboSource->__construct(Array)
+#2 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Model/Model.php(3417): ConnectionManager::getDataSource('default')
+#3 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Model/Model.php(1083): Model->setDataSource('default')
+#4 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Model/Model.php(3443): Model->setSource('pay_batches')
+#5 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Model/Model.php(1292): Model->getDataSource()
+#6 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Controller/Scaffold.php(136): Model->schema()
+#7 /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php(13): Scaffold->__construct(Object(PayBatchesController), Object(CakeRequest))
+#8 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Controller/Controller.php(489): PayBatchesController->_getScaffold(Object(CakeRequest))
+#9 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#10 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PayBatchesController), Object(CakeRequest), Object(CakeResponse))
+#11 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#12 {main}
+2012-06-20 14:09:35 Error: [MissingActionException] Action EmployeesController::read() could not be found.
+#0 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(EmployeesController), Object(CakeRequest), Object(CakeResponse))
+#2 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-06-20 14:10:00 Error: [MissingActionException] Action UsersController::read() could not be found.
+#0 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}
+2012-06-20 14:10:06 Error: [MissingActionException] Action UsersController::read() could not be found.
+#0 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#1 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(UsersController), Object(CakeRequest), Object(CakeResponse))
+#2 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#3 {main}

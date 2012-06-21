@@ -7,10 +7,19 @@ App::uses('EasyGridScaffold', 'Controller');
  * @property PayBatch $PayBatch
  */
 class PayBatchesController extends AppController {
+var $components = array('EasyGridComponent');
 	public $scaffold;
 	
 	protected function _getScaffold(CakeRequest $request) {
 		return new EasyGridScaffold($this, $request);
+	}
+	
+	function grid(){
+	
+	
+		$this->EasyGridComponent->setExtjsModels();
+	
+	
 	}
 
 
