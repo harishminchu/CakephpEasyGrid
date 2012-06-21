@@ -29,7 +29,7 @@ Thumbs.db
 !/app/tmp/
 
 /app/Config/*
-!/app/Config
+
 
 /app/tmp/cache/*
 !/app/tmp/cache/
