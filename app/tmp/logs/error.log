@@ -462,3 +462,11 @@
 #1 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(BuildingsController), Object(CakeRequest), Object(CakeResponse))
 #2 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
 #3 {main}
+2012-06-21 08:25:47 Error: [MissingActionException] Action PayBatches::rgrid() could not be found.
+#0 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Controller/Scaffold.php(151): EasyGridScaffold->_scaffold(Object(CakeRequest))
+#1 /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/AppController.php(38): Scaffold->__construct(Object(PayBatchesController), Object(CakeRequest))
+#2 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Controller/Controller.php(489): AppController->_getScaffold(Object(CakeRequest))
+#3 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(103): Controller->invokeAction(Object(CakeRequest))
+#4 /home1/abeachus/public_html/CakephpEasyGrid/lib/Cake/Routing/Dispatcher.php(85): Dispatcher->_invoke(Object(PayBatchesController), Object(CakeRequest), Object(CakeResponse))
+#5 /home1/abeachus/public_html/CakephpEasyGrid/app/webroot/index.php(92): Dispatcher->dispatch(Object(CakeRequest), Object(CakeResponse))
+#6 {main}

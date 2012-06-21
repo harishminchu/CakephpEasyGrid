@@ -26,3 +26,11 @@
 [20-Jun-2012 19:11:57] PHP Parse error:  syntax error, unexpected '}' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/Component/EasyGridComponent.php on line 79
 [21-Jun-2012 08:15:08] PHP Parse error:  syntax error, unexpected ';', expecting ')' in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 81
 [21-Jun-2012 08:15:34] PHP Parse error:  syntax error, unexpected ')' in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 82
+[21-Jun-2012 08:25:50] PHP Fatal error:  Call to a member function getExtjsModel() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 13
+[21-Jun-2012 08:25:57] PHP Fatal error:  Call to a member function getExtjsModel() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 13
+[21-Jun-2012 08:26:14] PHP Fatal error:  Call to a member function isForeignKey() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 66
+[21-Jun-2012 08:27:00] PHP Fatal error:  Function name must be a string in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 51
+[21-Jun-2012 08:27:21] PHP Fatal error:  Function name must be a string in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 51
+[21-Jun-2012 08:55:04] PHP Parse error:  syntax error, unexpected '[' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 14
+[21-Jun-2012 08:55:36] PHP Parse error:  syntax error, unexpected ')' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 14
+[21-Jun-2012 08:55:44] PHP Parse error:  syntax error, unexpected ')' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 14

@@ -7,10 +7,12 @@ App::uses('AppController', 'Controller');
  * @property PayBatch $PayBatch
  */
 class PayBatchesController extends AppController {
-
-	
+ 
+	 
 	function grid(){	
-	
+		$models = $this->PayBatch->getExtjsModel();
+		$associations = $this->PayBatch->getAssociated();
+		debug($associations[2]);
 	}
 
 

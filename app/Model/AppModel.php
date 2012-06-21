@@ -36,7 +36,7 @@ class AppModel extends Model {
 			
 			$foreignKeyFields = array();
 			
-			foreach($this->$belongsTo as $key => $value){
+			foreach($this->belongsTo as $key => $value){
 					$model = ClassRegistry::init($key);				
 					$forienKeyField = array(
 						'name' =>  $model->hasMany[$this->name]['foreignKey'],		
@@ -48,7 +48,7 @@ class AppModel extends Model {
 					array_push($foreignKeyFields, $forienKeyField);
 			}
 			ClassRegistry::flush();
-			return $foreignKeyFields();
+			return $foreignKeyFields;
 		}
 	
 	function getPath(){
@@ -63,7 +63,7 @@ class AppModel extends Model {
 		$fields = 	$this->getColumnTypes();
 		
 		foreach($fields as $key => $value){
-				if($model ->isForeignKey($key) == false)
+				if($this->isForeignKey($key) == false)
 					array_push($extjsFields, array('name' => $key, 'type'=>$value, 'isForeignKey' => false));			
 			}
 		
