@@ -30,22 +30,31 @@ class EasyGridComponent extends Component {
 			
 		}
 		
-		function generateExtjsModels(){		
+		function setExtjsModels(){		
 
 			$extjsModels = array();
-			$models = App::objects('model');
+			$models = App::objects('Model');
+			debug($models);
 			
 			foreach($models as $model){
+				
+				if($model == 'AppModel')
+					continue;
+				
 				$plural = Inflector ::pluralize($model);		
 				$path =  Inflector::underscore($plural );			
 				
 				$fieldArray = array();
 				
 				$this->$model = ClassRegistry::init($model);
+				
+				
 				$fields  = $this->$model->getColumnTypes(); 
+				
+				
 				$belongsTo = $this->$model->belongsTo;
-
-				$this->putExtjsModelNonForiengKeyFields($fieldArray, $fields, $this->$model);								
+				
+		 		$this->putExtjsModelNonForiengKeyFields($fieldArray, $fields, $this->$model);								
 				$this->putExtjsModelForiengKeyFields($fieldArray, $belongsTo, $this->$model->name);				
 				array_push($extjsModels, array(
 					'primaryKey' => $this->$model->primaryKey, 
@@ -59,12 +68,8 @@ class EasyGridComponent extends Component {
 			}
 			ClassRegistry::flush();
 			$callingController = $this->_Collection->getController();
-			$callingController->set('modelsForExjts', json_encode($extjsModels));
+		 	$callingController->set('modelsForExjts', json_encode($extjsModels));
+			echo json_encode($extjsModels);
 		}
-
-
-
-
-
 }
 ?>

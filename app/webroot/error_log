@@ -20,3 +20,7 @@
 [20-Jun-2012 13:01:55] PHP Fatal error:  Call to undefined method EasyGridScaffold::controller() in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 152
 [20-Jun-2012 13:15:14] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 142
 [20-Jun-2012 13:15:33] PHP Parse error:  syntax error, unexpected T_VARIABLE in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 142
+[20-Jun-2012 18:54:46] PHP Fatal error:  Call to a member function setExtjsModels() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 20
+[20-Jun-2012 19:06:54] PHP Fatal error:  Call to a member function getColumnTypes() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/Component/EasyGridComponent.php on line 47
+[20-Jun-2012 19:07:10] PHP Fatal error:  Call to a member function getColumnTypes() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/Component/EasyGridComponent.php on line 47
+[20-Jun-2012 19:11:57] PHP Parse error:  syntax error, unexpected '}' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/Component/EasyGridComponent.php on line 79
