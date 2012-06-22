@@ -124,16 +124,16 @@ class EasyGridScaffold extends Scaffold {
 				'callbacks' => false 
 			);
 			
-			$page =  $this->ScaffoldModel->find('all', $params);
-			$count = $this->ScaffoldModel->find('count', $countParams);
-			
-			
-			$toReturn = array();
-			for($i =0; $i< count($page); $i++){
-				array_push($toReturn, $page[$i][$this->ScaffoldModel->name ]);
-			}			
-			
-			return(array( $this->ScaffoldModel->name  => $toReturn, 'total' => $count));
+		$page =  $this->ScaffoldModel->find('all', $params);
+		$count = $this->ScaffoldModel->find('count', $countParams);
+		
+		
+		$toReturn = array();
+		for($i =0; $i< count($page); $i++){
+			array_push($toReturn, $page[$i][$this->ScaffoldModel->name ]);
+		}			
+		
+		return(array( $this->ScaffoldModel->name  => $toReturn, 'total' => $count));
 	}
 	
 	protected function _scaffoldRead(CakeRequest $request){
