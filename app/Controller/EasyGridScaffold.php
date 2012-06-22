@@ -108,7 +108,6 @@ class EasyGridScaffold extends Scaffold {
 	}
 	
 	function _getPage($page, $limit, $conditions, $orderBy){
-
 		$params = array(
 				'conditions' => $conditions,
 				'recursive' => -1, //int
