@@ -3,7 +3,7 @@
 App::uses('Scaffold', 'Controller');
 
 class EasyGridScaffold extends Scaffold {
-	
+	 
  /**
  * When methods are now present in a controller
  * scaffoldView is used to call default Scaffold methods if:
