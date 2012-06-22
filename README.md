@@ -29,8 +29,10 @@ Installation instructions
 Example Usage
 @todo  
 
-
-
+Improvments
+==========
+@todo: move AppModel functions to a behavior.  This will make integration easier
+@todo: scaffolding should not be used in production. Should move scaffodling CRUD functions to component insteald?
 
 
 
