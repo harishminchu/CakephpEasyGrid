@@ -107,35 +107,35 @@ class EasyGridScaffold extends Scaffold {
  
 	}
 	
-		function _getPage($page, $limit, $conditions, $orderBy){
+	function _getPage($page, $limit, $conditions, $orderBy){
 
-			$params = array(
-					'conditions' => $conditions,
-					'recursive' => -1, //int
-					'order' => $orderBy, //string or array defining order
-					'limit' => $limit, //int
-					'page'=>$page, //int   
-					'callbacks' => false 
-				);	
+		$params = array(
+				'conditions' => $conditions,
+				'recursive' => -1, //int
+				'order' => $orderBy, //string or array defining order
+				'limit' => $limit, //int
+				'page'=>$page, //int   
+				'callbacks' => false 
+			);	
 
-			$countParams = array(
-					'conditions' => $conditions,
-					'recursive' => -1, //int
-					'order' => $orderBy, //string or array defining order
-					'callbacks' => false 
-				);
-				
-				$page =  $this->ScaffoldModel->find('all', $params);
-				$count = $this->ScaffoldModel->find('count', $countParams);
-				
-				
-				$toReturn = array();
-				for($i =0; $i< count($page); $i++){
-					array_push($toReturn, $page[$i][$this->ScaffoldModel->name ]);
-				}			
-				
-				return(array( $this->ScaffoldModel->name  => $toReturn, 'total' => $count));
-		}
+		$countParams = array(
+				'conditions' => $conditions,
+				'recursive' => -1, //int
+				'order' => $orderBy, //string or array defining order
+				'callbacks' => false 
+			);
+			
+			$page =  $this->ScaffoldModel->find('all', $params);
+			$count = $this->ScaffoldModel->find('count', $countParams);
+			
+			
+			$toReturn = array();
+			for($i =0; $i< count($page); $i++){
+				array_push($toReturn, $page[$i][$this->ScaffoldModel->name ]);
+			}			
+			
+			return(array( $this->ScaffoldModel->name  => $toReturn, 'total' => $count));
+	}
 	
 	protected function _scaffoldRead(CakeRequest $request){
 		$this->layout = 'ajax';
