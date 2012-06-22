@@ -9,6 +9,6 @@
     echo $this->Html->script('grid/models');	
     echo $this->Html->script('grid/grid');
     echo $this->Html->script('grid/easyGrid');
-?>
+?> 
 
 <div id="ext-example1"></div> 
