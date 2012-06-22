@@ -13,31 +13,21 @@
 	'Ext.Date.*',
 	'Ext.toolbar.Paging'
 ]);
-
-Ext.define("Ext.view.AbstractView.LoadMask", {
-    override: "Ext.view.AbstractView",
-    onRender: function() { 
-        this.callParent(); 
-        if (this.loadMask && Ext.isObject(this.store)) { 
-            this.setMaskBind(this.store); 
-        } 
-    } 
-});
-
-Ext.onReady(function() {
+Ext.onReady(function() {	
+ 
 		var batchManager = new PayableGrid({
 				border : false,
 				hasPagingBar: true,
-				dataModel: 'PayBatch',
-				title :'Pay Batches', 		
-				store: 	Ext.getStore('PayBatch' + 'Store'),		
+				dataModel: modelName,
+				title : modelName,
+				store: 	Ext.getStore(modelName + 'Store'),		
 				admin: this.admin,
 				pageSize: 100
 			}
 		);	
 	
 	var mainPanel = Ext.create('Ext.panel.Panel', {
-		renderTo: Ext.getBody(),
+		renderTo: 'ext-example1',
 		width:'100%',
 		id: 'main-panel',
 		frame: false,

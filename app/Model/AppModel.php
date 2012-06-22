@@ -66,12 +66,19 @@ class AppModel extends Model {
 					array_push($extjsFields, array('name' => $key, 'type'=>$value, 'isForeignKey' => false));			
 			}
 		
-		array_merge($extjsFields, $this->extjsModelForeignKeyFields());
-		
+		$foreignFields =  $this->extjsModelForeignKeyFields();
+
+		for($i = 0; $i < count($foreignFields); $i++){
+			array_push($extjsFields,$foreignFields[$i]);
+		}
+
 		return 	$extjsFields;		
 	}
 	
-	function getExtjsModel(){			
+	function getExtjsModel(){	
+
+		
+	
 		return array(
 					'primaryKey'  => $this->primaryKey, 
 					'displayField' => $this->displayField, 
@@ -80,19 +87,15 @@ class AppModel extends Model {
 					'path'             => $this->getPath());
 	}
 	
-	function geAssociatedExtjsModels(){
+	function getAllExtjsModels(){
 			$allModels = array();
 			foreach($this->belongsTo as $key => $value){
 				$model = ClassRegistry::init($key);
 				array_push($allModels, $model->getExtjsModel());				
 			}	
-		return $allModels;
-	}
-		
-	function getAllExtjsModels(){
-		$toReturn = array();
-		array_push($toReturn, $this->getExtjsModel());
-		array_push($toReturn, $this->geAssociatedExtjsModels());
-		return $toReturn;		
-	}
+
+		array_push($allModels, $this->getExtjsModel());
+		return  json_encode($allModels);		
+	}		
+
 }

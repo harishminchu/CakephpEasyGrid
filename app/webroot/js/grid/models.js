@@ -1,5 +1,5 @@
-roothPath = '/payables';
-
+roothPath = '/CakephpEasyGrid';
+console.log(modelsForExjts);
 /*
  * Gets all the possible columns for a model given
  * a string that is the model name
@@ -39,7 +39,7 @@ Ext.define('App.Model',{
 });
 
 for(x in modelsForExjts){
-		
+				
 	Ext.define(modelsForExjts[x].name, {
 		id: modelsForExjts[x].name, 
 		extend: 'App.Model', 
@@ -84,7 +84,7 @@ for(x in modelsForExjts){
 			root: modelsForExjts[x].name			
 		},		 
 		api: {
-		read: roothPath + '/' + modelsForExjts[x].path + '/read',	
+				read: roothPath + '/' + modelsForExjts[x].path + '/read',	
 				update: roothPath + '/' +  modelsForExjts[x].path + '/update',
 				create: roothPath + '/' +  modelsForExjts[x].path + '/create',
 				destroy: roothPath + '/' +  modelsForExjts[x].path + '/destroy',	

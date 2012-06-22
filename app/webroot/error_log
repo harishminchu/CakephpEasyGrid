@@ -36,3 +36,28 @@
 [21-Jun-2012 08:55:44] PHP Parse error:  syntax error, unexpected ')' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/PayBatchesController.php on line 14
 [22-Jun-2012 08:23:06] PHP Fatal error:  Call to a member function getExtjsModel() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 89
 [22-Jun-2012 08:25:17] PHP Parse error:  syntax error, unexpected $end, expecting T_FUNCTION in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 101
+[22-Jun-2012 09:18:06] PHP Fatal error:  Call to a member function css() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/View/PayBatches/grid.ctp on line 6
+[22-Jun-2012 09:18:33] PHP Fatal error:  Call to a member function css() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/View/PayBatches/grid.ctp on line 6
+[22-Jun-2012 09:19:04] PHP Fatal error:  Call to a member function css() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/View/PayBatches/grid.ctp on line 6
+[22-Jun-2012 09:19:41] PHP Fatal error:  Call to a member function css() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/View/PayBatches/grid.ctp on line 6
+[22-Jun-2012 09:20:20] PHP Fatal error:  Call to a member function css() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/View/PayBatches/grid.ctp on line 6
+[22-Jun-2012 09:21:23] PHP Fatal error:  Call to a member function css() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/View/PayBatches/grid.ctp on line 6
+[22-Jun-2012 09:22:01] PHP Fatal error:  Call to a member function css() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/View/PayBatches/grid.ctp on line 12
+[22-Jun-2012 10:23:54] PHP Parse error:  syntax error, unexpected ';' in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 96
+[22-Jun-2012 10:38:23] PHP Parse error:  syntax error, unexpected T_RETURN in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 90
+[22-Jun-2012 11:13:33] PHP Parse error:  syntax error, unexpected T_STRING in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 70
+[22-Jun-2012 11:18:42] PHP Parse error:  syntax error, unexpected ']', expecting T_VARIABLE or '$' in /home1/abeachus/public_html/CakephpEasyGrid/app/Model/AppModel.php on line 72
+[22-Jun-2012 12:13:41] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 91
+[22-Jun-2012 12:14:43] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 91
+[22-Jun-2012 12:15:21] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 91
+[22-Jun-2012 12:19:51] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 90
+[22-Jun-2012 12:21:06] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 88
+[22-Jun-2012 12:21:10] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 88
+[22-Jun-2012 12:21:14] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 88
+[22-Jun-2012 12:21:29] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 90
+[22-Jun-2012 12:21:33] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 90
+[22-Jun-2012 12:22:05] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 88
+[22-Jun-2012 12:22:34] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 88
+[22-Jun-2012 12:22:59] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 90
+[22-Jun-2012 12:55:21] PHP Fatal error:  Call to undefined method EasyGridScaffold::set() in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 88
+[22-Jun-2012 13:17:48] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /home1/abeachus/public_html/CakephpEasyGrid/app/View/Scaffolds/grid.ctp on line 3

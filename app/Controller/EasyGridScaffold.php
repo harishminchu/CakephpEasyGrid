@@ -22,7 +22,7 @@ class EasyGridScaffold extends Scaffold {
 		if (isset($db)) {
 			if (empty($this->scaffoldActions)) {
 				$this->scaffoldActions = array(
-					'read', 'index', 'list', 'view', 'add', 'create', 'edit', 'update', 'delete'
+					'read', 'index', 'list', 'view', 'add', 'create', 'edit', 'update', 'delete', 'grid'
 				);
 			} elseif (!empty($prefixes) && in_array($scaffoldPrefix, $prefixes)) {
 				$this->scaffoldActions = array(
@@ -34,10 +34,13 @@ class EasyGridScaffold extends Scaffold {
 					$scaffoldPrefix . '_create',
 					$scaffoldPrefix . '_edit',
 					$scaffoldPrefix . '_update',
-					$scaffoldPrefix . '_delete'
+					$scaffoldPrefix . '_delete',
+					$scaffoldPrefix . '_grid'
 				);
 			}
 
+	
+			
 			if (in_array($request->params['action'], $this->scaffoldActions)) {
 				if (!empty($prefixes)) {
 					$request->params['action'] = str_replace($scaffoldPrefix . '_', '', $request->params['action']);
@@ -46,6 +49,9 @@ class EasyGridScaffold extends Scaffold {
 					case 'index':
 					case 'list':
 						$this->_scaffoldIndex($request);
+					break;
+					case 'grid':
+						$this->_scaffoldGrid($request);
 					break;
 					case 'view':
 						$this->_scaffoldView($request);
@@ -77,21 +83,22 @@ class EasyGridScaffold extends Scaffold {
 		}
 	}
 
+	protected function _scaffoldGrid(CakeRequest $request){
+	    $models = $this->ScaffoldModel->getAllExtjsModels();			
+		$this->controller->set('modelsForExjts', $models);		
+		$this->controller->set('modelName' , 	$this->ScaffoldModel->name);
+	}
+	
 	protected function _scaffoldUpdate(CakeRequest $request, $action = 'update') {
 		$formAction = 'update';
 		$this->layout = 'ajax';		
+		$this->controller->viewClass = 'Json';
 		$HTTP_RAW_POST_DATA = file_get_contents('php://input');		
 		//convert top level stdclass to array
-		$jsonData = get_object_vars(json_decode($HTTP_RAW_POST_DATA));		
-		$toSave = array();		
-		$toSave = (get_object_vars($jsonData[$this->ScaffoldModel->className]));
+		$jsonData = get_object_vars(json_decode($HTTP_RAW_POST_DATA));			
 		
-		unset($jsonData);		
-				
-		$data = array($this->ScaffoldModel->className => $toSave);		
-		
-		$success = $this->ScaffoldModel->save($data, array('validate' => true));
-		
+		$success = $this->ScaffoldModel->save($jsonData, array('validate' => true));
+
 		if($success !== false){			
 			unset($success);
 			$success = true;
