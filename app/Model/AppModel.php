@@ -47,7 +47,6 @@ class AppModel extends Model {
 					
 					array_push($foreignKeyFields, $forienKeyField);
 			}
-			ClassRegistry::flush();
 			return $foreignKeyFields;
 		}
 	
@@ -69,8 +68,7 @@ class AppModel extends Model {
 		
 		array_merge($extjsFields, $this->extjsModelForeignKeyFields());
 		
-		return 	$extjsFields;
-		
+		return 	$extjsFields;		
 	}
 	
 	function getExtjsModel(){			
@@ -80,5 +78,21 @@ class AppModel extends Model {
 					'name'           => $this->name, 
 					'fields'            => $this->getExtjsFields(),
 					'path'             => $this->getPath());
+	}
+	
+	function geAssociatedExtjsModels(){
+			$allModels = array();
+			foreach($this->belongsTo as $key => $value){
+				$model = ClassRegistry::init($key);
+				array_push($allModels, $model->getExtjsModel());				
+			}	
+		return $allModels;
+	}
+		
+	function getAllExtjsModels(){
+		$toReturn = array();
+		array_push($toReturn, $this->getExtjsModel());
+		array_push($toReturn, $this->geAssociatedExtjsModels());
+		return $toReturn;		
 	}
 }
