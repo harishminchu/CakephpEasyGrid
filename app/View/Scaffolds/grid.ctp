@@ -1,10 +1,7 @@
 <script type="text/javascript">
 	var modelsForExjts = <?php echo $modelsForExjts;?>;
 	var modelName = <?php echo '\'' . $modelName  . '\'';?>; 
-</script>
-
-
-  
+</script> 
 
 <?php
 /**
