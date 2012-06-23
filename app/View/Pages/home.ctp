@@ -32,7 +32,8 @@ All Extjs grids are automatically generated.
 <p>To see a demo, click on one of of the models on the left.
 In this demo, there are only models and controllers for each database table.  Scaffolding is used 
 so there are no views defined. Note: note all functionality is there for the grids. There is some CRUD
-functions, but callbacks need to be implemented to handle validation errors from cakephp.
+functions, but callbacks need to be implemented to handle validation errors from cakephp. It also may be slow.
+The Extjs front end needs to be refactored and the performance on the backend could be improved with caching.
 </p>
 
 <h3>Cakehp Files</h3>
