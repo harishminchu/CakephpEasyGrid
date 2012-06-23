@@ -84,8 +84,10 @@ class EasyGridScaffold extends Scaffold {
 	}
 
 	protected function _scaffoldGrid(CakeRequest $request){
-	    $models = $this->ScaffoldModel->getAllExtjsModels();			
-		$this->controller->set('modelsForExjts', $models);		
+	    $extjsModels = $this->ScaffoldModel->getAllExtjsModels();	
+		$models = App::objects('models');
+		$this->controller->set('models', $models);		
+		$this->controller->set('modelsForExjts', $extjsModels);		
 		$this->controller->set('modelName' , 	$this->ScaffoldModel->name);
 	}
 	

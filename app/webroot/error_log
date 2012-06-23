@@ -61,3 +61,7 @@
 [22-Jun-2012 12:22:59] PHP Fatal error:  Cannot use object of type stdClass as array in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 90
 [22-Jun-2012 12:55:21] PHP Fatal error:  Call to undefined method EasyGridScaffold::set() in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 88
 [22-Jun-2012 13:17:48] PHP Parse error:  syntax error, unexpected T_CONSTANT_ENCAPSED_STRING, expecting ',' or ';' in /home1/abeachus/public_html/CakephpEasyGrid/app/View/Scaffolds/grid.ctp on line 3
+[23-Jun-2012 12:05:24] PHP Parse error:  syntax error, unexpected ',' in /home1/abeachus/public_html/CakephpEasyGrid/app/View/Pages/home.ctp on line 9
+[23-Jun-2012 12:23:22] PHP Fatal error:  Call to a member function sort() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/View/Scaffolds/grid.ctp on line 36
+[23-Jun-2012 12:24:17] PHP Fatal error:  Call to a member function counter() on a non-object in /home1/abeachus/public_html/CakephpEasyGrid/app/View/Scaffolds/grid.ctp on line 75
+[23-Jun-2012 13:17:34] PHP Parse error:  syntax error, unexpected ':' in /home1/abeachus/public_html/CakephpEasyGrid/app/Controller/EasyGridScaffold.php on line 88

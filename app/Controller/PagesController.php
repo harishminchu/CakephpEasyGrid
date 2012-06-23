@@ -52,12 +52,19 @@ class PagesController extends AppController {
  */
 	public $uses = array();
 
-/**
- * Displays a view
- *
- * @param mixed What page to display
- * @return void
- */
+
+	public function home(){
+		$models = App::objects('models');
+		$this->set('models', $models);	
+	}
+	
+	/**
+	 * Displays a view
+	 *
+	 * @param mixed What page to display
+	 * @return void
+	 */
+	
 	public function display() {
 		$path = func_get_args();
 
@@ -78,5 +85,11 @@ class PagesController extends AppController {
 		}
 		$this->set(compact('page', 'subpage', 'title_for_layout'));
 		$this->render(implode('/', $path));
+	
+		if (method_exists($this, $page)) { 
+			$this->$page(); 
+		} 
+		// here's the last line 
+		$this->render(join('/', $path));	
 	}
 }

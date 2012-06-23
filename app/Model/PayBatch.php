@@ -6,7 +6,6 @@ App::uses('AppModel', 'Model');
  * @property Vendor $Vendor
  * @property CheckingAccount $CheckingAccount
  * @property Employee $Employee
- * @property RetaxPeriod $RetaxPeriod
  * @property PayableType $PayableType
  * @property Payable $Payable
  */
@@ -113,16 +112,6 @@ class PayBatch extends AppModel {
 				//'on' => 'create', // Limit validation to 'create' or 'update' operations
 			),
 		),
-		'retax_period_id' => array(
-			'numeric' => array(
-				'rule' => array('numeric'),
-				//'message' => 'Your custom message here',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
-		),
 		'transfered' => array(
 			'boolean' => array(
 				'rule' => array('boolean'),
@@ -210,13 +199,6 @@ class PayBatch extends AppModel {
 		'Employee' => array(
 			'className' => 'Employee',
 			'foreignKey' => 'employee_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'RetaxPeriod' => array(
-			'className' => 'RetaxPeriod',
-			'foreignKey' => 'retax_period_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
