@@ -1,6 +1,7 @@
-CakephpEasyGrid
+CakephpEasyGrid - Easily add and edit databaes tables without a database manager
 ===============
-This is a simple to use Cakephp scaffolding addition to allow for easily adding Extjs Grids to your Cakephp applications without any knowledge of Extjs.  This application addes the /grid scaffold to your applications so you can quickly get an editable grid for each of your Cakephp models.
+This is a simple to use Cakephp scaffolding addition that allows you to add/edit your tables without having to go to phpmyadmin.  It allows for faster prototyping because you can enter and edit rows quickly into your database.
+
 
 
 Cakehp Files
@@ -25,7 +26,7 @@ Javascript Files
 
 Installation instructions
 =========================
-Add AppModel.php to you Model folder or add the functions to your excisting AppModel.php file
+Add AppModel.php to you Model folder or add the functions to your excisting AppModel.php file  //need to change this to a behavior instead of in AppModel
 
 Add grid.ctp to your /app/View/Scaffolds folder
 
@@ -44,9 +45,10 @@ you must add the following to every controller that you want to use scaffolding.
 
 Improvments
 ==========
-@todo: move AppModel functions to a behavior.  This will make integration easier
-@todo: scaffolding should not be used in production. Should move scaffodling CRUD functions to component insteald?
-@todo: refactor front end.
+todo: move AppModel functions to a behavior.  This will make integration easier
+todo: refactor front end improve performance
+todo: improve backend performace.  All the model information that is used by the front end should be cached on the server, instead of querying every time a /grid page is loaded
+
 
 
 
