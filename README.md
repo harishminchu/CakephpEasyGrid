@@ -1,6 +1,6 @@
 CakephpEasyGrid - Easily add and edit databaes tables without a database manager
 ===============
-This is a simple to use Cakephp scaffolding addition that allows you to add/edit your tables without having to go to phpmyadmin.  It allows for faster prototyping because you can enter and edit rows quickly into your database.
+This is a simple to use Cakephp scaffolding addition that allows you to add and edit table rows without having to go to phpmyadmin.  It allows for faster prototyping because you can enter and edit rows quickly into your database.
 
 
 
