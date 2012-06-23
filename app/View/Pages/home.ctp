@@ -24,7 +24,7 @@
 
 <h2>CakephpEasyGrid - Easily edit database rows without a database manager </h2>
 <p>This is a simple to use Cakephp scaffolding addition that allows you to add and edit table rows 
-without having to go to phpmyadmin use Extjs. It allows for faster prototyping because you can 
+without having to go to phpmyadmin using the power of Extjs 4.1. It allows for faster prototyping because you can 
 enter and edit rows quickly into your database. CakephpEasyGrid requires no knowledge of Extjs. 
 All Extjs grids are automatically generated. 
 
