@@ -22,8 +22,7 @@
  */
  
 ?>
-<div class="<?php echo $pluralVar;?> index">
-
+<div class="<?php echo 'Controllers';?> index">
 
 <table cellpadding="0" cellspacing="0">
 <tr>
@@ -41,10 +40,10 @@
 
 </table>
 </div>
+
 <div class="actions">
-	<h3><?php echo __d('cake', 'Actions'); ?></h3>
+	<h3><?php echo __d('cake', 'Models'); ?></h3>
 	<ul>
-		<li><?php echo $this->Html->link(__d('cake', 'New %s', $singularHumanName), array('action' => 'add')); ?></li>
 <?php
 		foreach ($models as $model) {				
 		echo "<li>" . $this->Html->link($model,array('controller' => Inflector::underscore(Inflector::pluralize($model)), 'action' => 'grid')). "</li>";	
@@ -52,4 +51,6 @@
 ?>
 	</ul>
 </div>
+
+
 

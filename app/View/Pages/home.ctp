@@ -26,13 +26,16 @@
 <p>This is a simple to use Cakephp scaffolding addition that allows you to add and edit table rows 
 without having to go to phpmyadmin using the power of Extjs 4.1. It allows for faster prototyping because you can 
 enter and edit rows quickly into your database. CakephpEasyGrid requires no knowledge of Extjs. 
-All Extjs grids are automatically generated. 
+All Extjs grids are automatically generated. Note that all views on this page are generated using Cakephp's scaffolding 
+which is not for production but for quick prototypes. I will slowly make updates to this site but I will also push all source to github.
+
+<?php echo $this->Html->link('http://www.github.com/ajbeach2/CakephpEasyGrid','http://www.github.com/ajbeach2/CakephpEasyGrid'); ?>
 
 <h4>Demo</h4>
 <p>To see a demo, click on one of of the models on the left.
 In this demo, there are only models and controllers for each database table.  Scaffolding is used 
-so there are no views defined. Note: note all functionality is there for the grids. There is some CRUD
-functions, but callbacks need to be implemented to handle validation errors from cakephp. It also may be slow.
+so there are no views defined. Note: not all functionality is there for the grids. There is some CRUD
+functions, but callbacks need to be implemented to handle validation errors from Cakephp. It also may be slow.
 The Extjs front end needs to be refactored and the performance on the backend could be improved with caching.
 </p>
 
@@ -54,7 +57,19 @@ behavior so that AppModel.php doesn't have to be modified.</p>
 <p>This is the view used by the EasyGridSaccfold class. Add this to your app/View/Scaffolds/ folder</p>
 
 <h3>Javascript Files</h3>
-<p>@todo</p>
+
+<h4>exit-add-devjs</h4>
+Required for extjs. Should be in /app/webroot/js/
+
+<h4>easyGrid.js</h4>
+cotains all the logic for the Extjs Javascript classes
+
+<h4>grid.js</h4>
+This file contains the overwritten Ext.grid.panle class that automatically generates editable grids for each model that is passed from cakephp
+
+<h4>models.js</h4>
+Containas model definitions and functions related to Extjs Models.
+
 <h3>Installation instructions</h3>
 <p>
 <ul>
@@ -67,7 +82,8 @@ protected function _getScaffold(CakeRequest $request){<br>
 <ul>return new EasyGridScaffold($this, $request);</ul>
 } <br>
 </ul>
-<li>@todo ext installation as this requires extjs @todo other js file instatllion</li>
+<li>@todo ext installation as this requires extjs</li>
+<li>@todo other js file instatllion</li>
 </ul>
 
 <p><h3>Improvments</h3>
@@ -77,11 +93,14 @@ This will make integration easier todo: refactor front end improve performance
 that is used by the front end should be cached on the server, i
 nstead of querying every time a /grid page is loaded
 
+<p><h3>Source code</h3>
+
+
 
 </table>
 </div>
 <div class="actions">
-	<h3><?php echo __d('cake', 'Actions'); ?></h3>
+	<h3><?php echo __d('cake', 'Models'); ?></h3>
 	<ul>
 <?php
 		foreach ($models as $model) {				
