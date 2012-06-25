@@ -29,12 +29,12 @@ enter and edit rows quickly into your database. CakephpEasyGrid requires no know
 All Extjs grids are automatically generated. Note that all views on this page are generated using Cakephp's scaffolding 
 which is not for production but for quick prototypes. I will slowly make updates to this site but I will also push all source to github.
 
-<?php echo $this->Html->link('http://www.github.com/ajbeach2/CakephpEasyGrid','http://www.github.com/ajbeach2/CakephpEasyGrid'); ?>
+<p><?php echo $this->Html->link('http://www.github.com/ajbeach2/CakephpEasyGrid','http://www.github.com/ajbeach2/CakephpEasyGrid'); ?>
 
 <h4>Demo</h4>
 <p>To see a demo, click on one of of the models on the left.
 In this demo, there are only models and controllers for each database table.  Scaffolding is used 
-so there are no views defined. Note: not all functionality is there for the grids. There is some CRUD
+so there are no views accept those that are used with scaffolding. Note: not all functionality is there for the grids. There is some CRUD
 functions, but callbacks need to be implemented to handle validation errors from Cakephp. It also may be slow.
 The Extjs front end needs to be refactored and the performance on the backend could be improved with caching.
 </p>
@@ -94,6 +94,7 @@ that is used by the front end should be cached on the server, i
 nstead of querying every time a /grid page is loaded
 
 <p><h3>Source code</h3>
+<p>http://www.github.com/ajbeach2/CakephpEasyGrid
 
 
 
