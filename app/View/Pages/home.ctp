@@ -87,11 +87,12 @@ protected function _getScaffold(CakeRequest $request){<br>
 </ul>
 
 <p><h3>Improvments</h3>
-<p>todo: move AppModel functions to a behavior. 
-This will make integration easier todo: refactor front end improve performance 
-<br>todo: improve backend performace. All the model information 
-that is used by the front end should be cached on the server, i
-nstead of querying every time a /grid page is loaded
+<p>@todo: move AppModel functions to a behavior. 
+This will make integration easier 
+<br>@todo: refactor front end improve performance 
+<br>@todo: improve backend performace. All the model information 
+that is used by the front end should be cached on the server, 
+instead of querying every time a /grid page is loaded
 
 <p><h3>Source code</h3>
 <p>http://www.github.com/ajbeach2/CakephpEasyGrid
