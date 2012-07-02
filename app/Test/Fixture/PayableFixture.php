@@ -39,7 +39,7 @@ class PayableFixture extends CakeTestFixture {
 			'pay_batch_id' => 1,
 			'apartment_id' => 1,
 			'account' => 'Lorem ipsum dolor sit amet',
-			'date' => '2012-06-20',
+			'date' => '2012-07-02',
 			'amount' => 1,
 			'notes' => 'Lorem ipsum dolor sit amet, aliquet feugiat. Convallis morbi fringilla gravida, phasellus feugiat dapibus velit nunc, pulvinar eget sollicitudin venenatis cum nullam, vivamus ut a sed, mollitia lectus. Nulla vestibulum massa neque ut et, id hendrerit sit, feugiat in taciti enim proin nibh, tempor dignissim, rhoncus duis vestibulum nunc mattis convallis.',
 			'tax_number_id' => 1,

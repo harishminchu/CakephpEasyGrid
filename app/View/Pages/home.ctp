@@ -32,7 +32,7 @@ which is not for production but for quick prototypes. I will slowly make updates
 <p><?php echo $this->Html->link('http://www.github.com/ajbeach2/CakephpEasyGrid','http://www.github.com/ajbeach2/CakephpEasyGrid'); ?>
 
 <h4>Demo</h4>
-<p>To see a demo, click on one of of the models on the left.
+<p>To see a demo, click on one of of the models on the left.  This will take you to the grid scaffold for each model. Invividual cells can be modified in each grid and all grids having paging.
 In this demo, there are only models and controllers for each database table.  Scaffolding is used 
 so there are no views accept those that are used with scaffolding. Note: not all functionality is there for the grids. There is some CRUD
 functions, but callbacks need to be implemented to handle validation errors from Cakephp. It also may be slow.

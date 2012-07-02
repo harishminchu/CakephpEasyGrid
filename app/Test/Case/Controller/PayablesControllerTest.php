@@ -35,7 +35,7 @@ class PayablesControllerTestCase extends CakeTestCase {
  *
  * @var array
  */
-	public $fixtures = array('app.payable', 'app.building', 'app.checking_account', 'app.bank', 'app.vendor', 'app.pay_batch', 'app.employee', 'app.retax_period', 'app.payable_type', 'app.account_type', 'app.apartment', 'app.tax_number');
+	public $fixtures = array('app.payable', 'app.building', 'app.checking_account', 'app.bank', 'app.vendor', 'app.pay_batch', 'app.employee', 'app.payable_type', 'app.account_type', 'app.apartment', 'app.tax_number');
 
 /**
  * setUp method
